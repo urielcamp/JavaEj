@@ -236,6 +236,63 @@ public class Matrices {
         System.out.println(promedio);
 
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 9");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        // Número mayor en una matriz 3x3.
+
+        int[][] mNueve = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+
+        int max = mNueve[0][0];
+
+        for(int i = 0; i < mNueve.length; i++){
+            for(int j = 0; j < mNueve[i].length; j++){
+                if (mNueve[i][j] >= max) {
+                    max = mNueve[i][j];
+                }
+            }
+        }
+
+        System.out.println(max);
+
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 10");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Número menor en una matriz 3x3.
+        //Encuentra y muestra el valor más pequeño.
+
+        int[][] mDiez = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+
+        int min = mDiez[0][0];
+
+        for(int i = 0; i < mDiez.length; i++){
+            for(int j = 0; j < mDiez[i].length; j++){
+                if (mDiez[i][j] <= min) {
+                    min = mDiez[i][j];
+                }
+            }
+        }
+
+        System.out.println(min);
 
 
 
