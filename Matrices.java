@@ -107,8 +107,8 @@ public class Matrices {
 
         for(int i = 0; i < mCuatro.length; i++){
             for(int j = 0; j < mCuatro[i].length; j++){
-                int n = scanner.nextInt();
-                mCuatro[i][j] = n;
+                //int n = scanner.nextInt();
+                //mCuatro[i][j] = n;
                 
             }
         }
@@ -125,6 +125,34 @@ public class Matrices {
         }
 
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 5");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println();
+        System.out.println();
+
+        //Imprimir la diagonal principal de una matriz 3x3.
+
+        int[][] mCinco = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+
+        for(int i = 0; i < mCinco.length; i++){
+            for(int j = 0; j < mCinco[i].length; j++){
+                if (i == j) {
+                    System.out.print(mCinco[i][j] + " ");
+                }else{
+                    System.out.print(0 + " ");
+                }
+            }
+            System.out.println();
+        }
 
 
 
