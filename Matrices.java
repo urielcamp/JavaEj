@@ -16,8 +16,7 @@ public class Matrices {
         System.out.println();
         System.out.println("---------------------------------");
         System.out.println();
-        System.out.println();
-        System.out.println();
+
 
         //1. Crear una matriz 3x3 y mostrarla.
         //Declara una matriz de enteros 3x3, asigna valores manualmente y muéstrala por pantalla.
@@ -46,8 +45,6 @@ public class Matrices {
         System.out.println();
         System.out.println("---------------------------------");
         System.out.println();
-        System.out.println();
-        System.out.println();
 
         //Matriz 2x4 con todos los valores en 1.
         //Usa bucles para llenarla y mostrarla.
@@ -70,8 +67,7 @@ public class Matrices {
         System.out.println();
         System.out.println("---------------------------------");
         System.out.println();
-        System.out.println();
-        System.out.println();
+
 
         //Matriz 4x4 con números del 1 al 16.
         //Rellena secuencialmente e imprime.
@@ -95,8 +91,7 @@ public class Matrices {
         System.out.println();
         System.out.println("---------------------------------");
         System.out.println();
-        System.out.println();
-        System.out.println();
+
 
         //Leer matriz 2x2 desde teclado.
         //Pide valores al usuario y muestra la matriz resultante.
@@ -132,8 +127,7 @@ public class Matrices {
         System.out.println();
         System.out.println("---------------------------------");
         System.out.println();
-        System.out.println();
-        System.out.println();
+
 
         //Imprimir la diagonal principal de una matriz 3x3.
 
@@ -153,6 +147,34 @@ public class Matrices {
             }
             System.out.println();
         }
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 6");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Imprimir la diagonal secundaria de una matriz 3x3.
+
+        int[][] mSeis = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7 , 8, 9}
+        };
+
+        for(int i = 0; i < mSeis.length; i++){
+            for(int j = 0; j < mSeis[i].length; j++){
+                if(i + j == mSeis.length - 1){
+                    System.out.print(mSeis[i][j] + " ");
+                }else{
+                    System.out.print(0 + " ");
+                }
+            }
+            System.out.println();
+        }
+
 
 
 
