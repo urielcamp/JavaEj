@@ -176,6 +176,34 @@ public class Matrices {
         }
 
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 7");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Suma de todos los elementos de una matriz 3x3.
+        //Muestra el resultado final
+        
+        int[][] mSiete = {
+
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+
+        };
+
+        int suma = 0;
+
+        for(int i = 0; i < mSiete.length; i++){
+            for(int j = 0; j < mSiete[i].length; j++){
+                suma += mSiete[i][j];
+            }
+        }
+
+        System.out.println(suma);
 
 
 
