@@ -1,3 +1,6 @@
+import java.util.Scanner;
+
+
 public class Matrices {
     public static void main(String[] args) {
         System.out.println();
@@ -83,5 +86,94 @@ public class Matrices {
             }
             System.out.println();
         }
+
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 4");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println();
+        System.out.println();
+
+        //Leer matriz 2x2 desde teclado.
+        //Pide valores al usuario y muestra la matriz resultante.
+
+        Scanner scanner = new Scanner(System.in);
+
+        int[][] mCuatro = new int[2][2];
+
+        for(int i = 0; i < mCuatro.length; i++){
+            for(int j = 0; j < mCuatro[i].length; j++){
+                int n = scanner.nextInt();
+                mCuatro[i][j] = n;
+                
+            }
+        }
+
+        System.out.println();
+
+        for(int i = 0; i < mCuatro.length; i++){
+            for(int j = 0; j < mCuatro[i].length; j++){
+                System.out.print(mCuatro[i][j] + " "+ " ");
+            }
+
+
+            System.out.println();
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }
