@@ -278,7 +278,7 @@ public class Matrices {
 
         int[][] mDiez = {
             {1, 2, 3},
-            {4, 5, 6},
+            {4, -5, 6},
             {7, 8, 9}
         };
 
@@ -295,9 +295,60 @@ public class Matrices {
         System.out.println(min);
 
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 11");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        // Tabla del 5 en una matriz 3x3.
+
+        int[][] mOnce = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+
+        for(int i = 0; i < mOnce.length; i++){
+            for(int j = 0; j < mOnce[i].length; j++){
+                mOnce[i][j] *= 5;
+                System.out.print(mOnce[i][j] + " ");
+            }
+            System.out.println();
+        }
 
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 12");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
 
+        //Mostrar solo las esquinas de una matriz 4x4.
+        //Los demás valores se muestran como 0.
+        
+        int[][] mDoce = {
+            {1, 2, 3, 4},
+            {5, 6, 7, 8},
+            {9, 10, 11, 12},
+            {13, 14, 15, 16}
+            
+        };
+
+        for(int i = 0; i < mDoce.length; i++){
+            for(int j = 0; j < mDoce[i].length; j++){
+                if((i == 0 && j == mDoce.length - 1) || (i == mDoce.length - 1 && j == 0) || (i == 0 && j == 0) || (i == mDoce.length - 1 && j == mDoce.length - 1)){
+                    System.out.print(mDoce[i][j] + " ");
+                }else{
+                    System.out.print(0 + " ");
+                }
+            }
+            System.out.println();
+        }
 
 
 
