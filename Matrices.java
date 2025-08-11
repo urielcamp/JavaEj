@@ -205,6 +205,36 @@ public class Matrices {
 
         System.out.println(suma);
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 8");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Promedio de todos los elementos de una matriz 3x3.
+        //Devuelve un número decimal.
+
+        int[][] mOcho = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+
+        int s = 0;
+        int count = 0;
+
+        for(int i = 0; i < mOcho.length; i++){
+            for(int j = 0; j < mOcho[i].length; j++){
+                s += mOcho[i][j];
+                count++;
+            }
+        }
+
+        double promedio = (double) s / count;
+        System.out.println(promedio);
+
 
 
 
