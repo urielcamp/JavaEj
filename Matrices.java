@@ -54,10 +54,34 @@ public class Matrices {
         for(int i = 0; i < mDos.length; i++){
             for(int j = 0; j < mDos[i].length; j++){
                 mDos[i][j] = 1;
-                System.out.print(mDos[i][j]);
+                System.out.print(mDos[i][j] + " ");
             }
             System.out.println();
         }
 
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 3");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println();
+        System.out.println();
+
+        //Matriz 4x4 con números del 1 al 16.
+        //Rellena secuencialmente e imprime.
+
+        int[][] mTres = new int[4][4];
+        int c = 0;
+        for(int i = 0; i < mTres.length; i++){
+            for(int j = 0; j < mTres[i].length; j++){
+                c++;
+                mTres[i][j] = c;
+                System.out.print(mTres[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 }
