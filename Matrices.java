@@ -416,6 +416,49 @@ public class Matrices {
         }
 
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 3");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Intercambiar primera fila con la última en una matriz 4x4.
+
+        int[][] maTres = {
+            {1, 2, 3, 4},
+            {5, 6, 7, 8},
+            {9, 10, 11, 12},
+            {13, 14, 15, 16}
+        };
+
+        int[][] auxTres = new int[maTres.length][maTres.length];
+
+        for(int i = 0; i < maTres.length; i++){
+            for(int j = 0; j < maTres[i].length; j++){
+                if(i == 0){
+                    auxTres[i][j] = maTres[maTres.length - 1][j];
+                }else if(i == maTres.length - 1){
+                    auxTres[maTres.length - 1][j] = maTres[0][j];
+                }else{
+                    auxTres[i][j] = maTres[i][j];
+                }
+
+                //maTres[maTres.length - 1 - i][j] = maTres[i][j];
+                //maTres[0][j] = maTres[maTres.length - 1 - i][j];
+            }
+        }
+
+
+        for(int i = 0; i < auxTres.length; i++){
+            for(int j = 0; j < auxTres[i].length; j++){
+                System.out.print(auxTres[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+
 
 
 
