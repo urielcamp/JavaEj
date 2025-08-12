@@ -389,6 +389,31 @@ public class Matrices {
         }
 
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 2");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Suma de elementos de cada columna en una matriz 3x3.
+
+        int[][] maDos = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+
+        
+
+        for(int i = 0; i < maDos.length; i++ ){
+            int sColumna = 0;
+            for(int j = 0; j < maDos[i].length; j++){
+                sColumna += maDos[j][i];
+            }
+            System.out.println(sColumna);
+        }
 
 
 
