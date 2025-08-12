@@ -459,7 +459,43 @@ public class Matrices {
         }
 
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 4");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
 
+        //Intercambiar primera columna con la última, 4x4.
+
+        int[][] maCuatro = {
+            {1, 2, 3, 4},
+            {5, 6, 7, 8},
+            {9, 10, 11, 12},
+            {13, 14, 15, 16}
+        };
+
+        int[][] auxCuatro = new int[maCuatro.length][maCuatro.length];
+
+        for(int i = 0; i < maCuatro.length; i++){
+            for(int j = 0; j < maCuatro[i].length; j++){
+                if(j == maCuatro.length - 1){
+                    auxCuatro[i][maCuatro.length - 1] = maCuatro[i][0]; 
+                }else if(j == 0){
+                    auxCuatro[i][j] = maCuatro[i][maCuatro.length - 1];
+                }else{
+                    auxCuatro[i][j] = maCuatro[i][j];
+                }
+            }
+        }
+
+        for(int i = 0; i < auxCuatro.length; i++){
+            for(int j = 0; j < auxCuatro[i].length; j++){
+                System.out.print(auxCuatro[i][j] + " ");
+            }
+            System.out.println();
+        }
 
 
 
