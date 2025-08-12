@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+import java.util.Random;
 
 public class Matrices {
     public static void main(String[] args) {
@@ -684,8 +684,64 @@ public class Matrices {
             System.out.println();
         }
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 11");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
 
+        //Llenar matriz 3x3 con números aleatorios y contar cuántos son pares.
 
+        int[][] maOnce = new int[3][3];
+
+        Random random = new Random();
+        int paresOnce = 0;
+
+        for(int i = 0; i < maOnce.length; i++){
+            for(int j = 0; j < maOnce[i].length; j++){
+                int aleatorio = random.nextInt(100);
+                maOnce[i][j] = aleatorio;
+
+                if(maOnce[i][j]%2 == 0){
+                    paresOnce++;
+                }
+
+                System.out.print(maOnce[i][j] + " ");
+
+            }
+            System.out.println();
+        }
+
+        System.out.println(paresOnce);
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 12");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Cambiar todos los números negativos de una matriz por 0.
+
+        int[][] maDoce = {
+            {1, 2, 3, -4},
+            {5, 6, 7, 8},
+            {9, 10, -11, 12},
+            {-13, 14, 15, 16}
+        };
+
+        for(int i = 0; i <  maDoce.length; i++){
+            for(int j = 0; j < maDoce[i].length; j++){
+                if(maDoce[i][j] <= 0){
+                    maDoce[i][j] = 0;
+                }
+                System.out.print(maDoce[i][j] + " ");
+            }
+            System.out.println();
+        }
 
 
 
