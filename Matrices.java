@@ -550,7 +550,7 @@ public class Matrices {
 
         for(int i = 0; i < maSeis.length; i++){
             for(int j = 0; j < maSeis[i].length; j++){
-                if (i + j == maSeis.length - 1 ) {
+                if (i + j == maSeis.length - 1) {
                     maSeis[i][j] = 1;
                 }else{
                     maSeis[i][j] = 0;
@@ -561,11 +561,62 @@ public class Matrices {
         }
 
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 7");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
 
+        //Rotar una matriz 3x3 90° a la derecha.
 
+        int[][] maSiete = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
 
+        int[][] auxSiete = new int[maSiete.length][maSiete.length];
 
+        for(int i = 0; i < maSiete.length; i++){
+            for(int j = 0; j < maSiete[i].length; j++){
+                auxSiete[j][maSiete.length - i - 1] = maSiete[i][j];
+            }
+        }
 
+        for(int i = 0; i < maSiete.length; i++){
+            for(int j = 0; j < maSiete[i].length; j++){
+                System.out.print(auxSiete[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 8");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Rotar una matriz 3x3 90° a la izquierda.
+
+        int[][] maOcho = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+
+        int[][] auxOcho = new int[maOcho.length][maOcho.length];
+
+        for(int i = 0; i < maOcho.length; i++){
+            for(int j = 0; j < maOcho[i].length; j++){
+                auxOcho[i][j] = maOcho[j][maOcho.length - i - 1];
+                System.out.print(auxOcho[i][j] + " ");
+            }
+            System.out.println();
+        }
 
 
 
