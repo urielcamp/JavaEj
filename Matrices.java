@@ -619,16 +619,70 @@ public class Matrices {
         }
 
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 9");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Reflejar una matriz 4x4 horizontalmente.
+
+        int[][] maNueve = {
+            {1, 2, 3, 4},
+            {5, 6, 7, 8},
+            {9, 10, 11, 12},
+            {13, 14, 15, 16}
+        };
+
+        int[][] auxNueve = new int[maNueve.length][maNueve.length];
+
+        for(int i = 0; i < maNueve.length; i++){
+            for(int j = 0; j < maNueve[i].length; j++){
+                auxNueve[i][maNueve.length - j - 1] = maNueve[i][j];
+            }
+        }
+
+        for(int i = 0; i < maNueve.length; i++){
+            for(int j = 0; j < maNueve[i].length; j++){
+                System.out.print(auxNueve[i][j] + " ");
+            }
+            System.out.println();
+        }
 
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 10");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
 
+        //Reflejar una matriz 4x4 verticalmente.
 
+        int[][] maDiez = {
+            {1, 2, 3, 4},
+            {5, 6, 7, 8},
+            {9, 10, 11, 12},
+            {13, 14, 15, 16}
+        };
 
+        int[][] auxDiez = new int[maDiez.length][maDiez.length];
 
+        for(int i = 0; i < maDiez.length; i++){
+            for(int j = 0; j < maDiez[i].length; j++){
+                auxDiez[maDiez.length - i - 1][j] = maDiez[i][j]; 
+            }
+        }
 
-
-
-
+        for(int i = 0; i < auxDiez.length; i++){
+            for(int j = 0; j < auxDiez[i].length; j++){
+                System.out.print(auxDiez[i][j] + " ");
+            }
+            System.out.println();
+        }
 
 
 
