@@ -7,7 +7,7 @@ public class Matrices {
         System.out.println();
         System.out.println("---------------------------------");
         System.out.println();
-        System.out.println("MATRICES DIA 1");
+        System.out.println("MATRICES DIA 1 -- FUNDAMENTOS DE MATRICES");
         System.out.println();
         System.out.println("---------------------------------");
         System.out.println();
@@ -349,6 +349,45 @@ public class Matrices {
             }
             System.out.println();
         }
+
+
+
+
+        System.out.println();
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("MATRICES DIA 2 -- RECORRIDOS Y TRANSFORMACIONES");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+
+        System.out.println("EJER 1");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Suma de elementos de cada fila en una matriz 3x3.
+
+
+        int[][] maUno = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+
+
+
+        for(int i = 0; i < maUno.length; i++){
+            int sFila = 0;
+            for(int j = 0; j < maUno[i].length; j++){
+                sFila += maUno[i][j];
+                
+            }
+            System.out.println("Suma fila 1: " + sFila);
+        }
+
 
 
 
