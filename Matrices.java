@@ -498,6 +498,37 @@ public class Matrices {
         }
 
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 5");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Llenar una matriz 5x5 con 1 en la diagonal principal y 0 en el resto.
+
+        int[][] maCinco = {
+            {1, 2, 3, 4, 5},
+            {6, 7, 8, 9, 10},
+            {11, 12, 13, 14, 15},
+            {16, 17, 18, 19, 20},
+            {21, 22, 23, 24, 25}
+        };
+
+        for(int i = 0; i < maCinco.length; i++){
+            for(int j = 0; j < maCinco[i].length; j++){
+                if(i == j){
+                    maCinco[i][j] = 1;
+                }else{
+                    maCinco[i][j] = 0;
+                }
+
+                System.out.print(maCinco[i][j] + " ");
+            }
+            System.out.println();
+        }
+
 
 
 
