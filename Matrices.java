@@ -743,11 +743,89 @@ public class Matrices {
             System.out.println();
         }
 
+        System.out.println();
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("MATRICES DIA 3 -- OPERACIONES INTERMEDIAS");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
 
 
+        System.out.println("EJER 1");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Sumar dos matrices 3x3.
+
+        int[][] matUnoA = {
+
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+
+        };
 
 
+        int[][] matUnoB = {
 
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+
+        };
+
+
+        int n = matUnoB.length;
+
+        int[][] auxMatUno = new int[n][n];
+
+        for(int i = 0; i < n; i++){
+            for(int j = 0; j < n; j++){
+                auxMatUno[i][j] = matUnoB[i][j] + matUnoA[i][j];
+                System.out.print(auxMatUno[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 2");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Restar dos matrices 3x3.
+
+        int[][] matDosA = {
+
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+
+        };
+
+
+        int[][] matDosB = {
+
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+
+        };
+
+        int[][] auxMatDos = new int[matDosB.length][matDosB.length];
+
+        for(int i = 0; i < matDosB.length; i++){
+            for(int j = 0; j < matDosB.length; j++){
+                auxMatDos[i][j] = matDosB[i][j] - matDosA[i][j];
+                System.out.print(auxMatDos[i][j] + " ");
+            }
+            System.out.println();
+        }
 
 
 
