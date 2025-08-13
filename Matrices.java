@@ -828,6 +828,63 @@ public class Matrices {
         }
 
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 3");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Multiplicar dos matrices 2x2.
+
+        int[][] matTresA ={
+
+            {1, 2},
+            {1, 2},
+
+        };
+
+        int[][] matTresB ={
+
+            {1, 2},
+            {1, 2},
+
+        };
+
+        int[][] auxMatTres = new int[matTresA.length][matTresB.length];
+
+        for(int i = 0; i < matTresA.length; i++){
+            for(int j = 0; j < matTresA.length; j++){
+                auxMatTres[i][j] = matTresA[i][j] * matTresB[i][j];
+                System.out.print(auxMatTres[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 4");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Calcular la transpuesta de una matriz 3x3.
+
+        int[][] matCuatro = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+
+        for(int i = 0; i < matCuatro.length; i++){
+            for(int j = 0; j < matCuatro[i].length; j++){
+                
+                System.out.print(matCuatro[j][i] + " ");
+            }
+            System.out.println();
+        }
 
 
 
