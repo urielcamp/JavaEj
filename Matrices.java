@@ -880,11 +880,80 @@ public class Matrices {
 
         for(int i = 0; i < matCuatro.length; i++){
             for(int j = 0; j < matCuatro[i].length; j++){
-                
                 System.out.print(matCuatro[j][i] + " ");
             }
             System.out.println();
         }
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 5");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Suma de elementos en la mitad superior de la diagonal principal.
+
+        int[][] matCinco = {
+
+            {1, 2, 3, 4, 5},
+            {6, 7, 8, 9, 10},
+            {11, 12, 13, 14, 15},
+            {16, 17, 18, 19, 20},
+            {21, 22, 23, 24, 25}
+
+        };
+
+        for(int i = 0; i < matCinco.length; i++){
+            for(int j = 0; j < matCinco[i].length; j++){
+
+                if (i == j) {
+                    if (j <= (matCinco.length - 1) / 2) {
+                        matCinco[i][j] += matCinco[i][j];
+                    }
+                }
+
+                System.out.print(matCinco[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 6");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Suma de elementos en la mitad inferior de la diagonal principal.
+
+        int[][] matSeis = {
+
+            {1, 2, 3, 4, 5},
+            {6, 7, 8, 9, 10},
+            {11, 12, 13, 14, 15},
+            {16, 17, 18, 19, 20},
+            {21, 22, 23, 24, 25}
+
+        };
+
+        for(int i = 0; i < matSeis.length; i++){
+            for(int j = 0; j < matSeis.length; j++){
+
+                if(i == j){
+                    if(j > (matSeis.length - 1)/2){
+                        matSeis[i][j] += matSeis[i][j];
+                    }
+                }
+
+                System.out.print(matSeis[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+
 
 
 
