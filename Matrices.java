@@ -1095,7 +1095,80 @@ public class Matrices {
             System.out.println();
         }
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 11");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
 
+        //Suma de diagonales principal y secundaria.
+
+        int[][] matOnce = {
+
+            {1, 2, 3, 4},
+            {5, 6, 7, 8},
+            {9, 10, 11, 12},
+            {12, 13, 14, 15}
+
+        };
+
+        for(int i = 0; i < matOnce.length; i++){
+            for(int j = 0; j < matOnce[i].length; j++){
+                if(i == j){
+                    matOnce[i][j] += matOnce[i][j];
+                }else if(i + j == matOnce.length - 1){
+                    matOnce[i][j] += matOnce[i][j];
+                }
+
+                System.out.print(matOnce[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 12");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Contar elementos mayores al promedio de toda la matriz.
+
+        int[][] matDoce = {
+
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+
+        };
+
+        int sumDoce = 0;
+        int cDoce = 0;
+        int coDoce = 0;
+
+        for(int i = 0; i < matDoce.length; i++){
+            for(int j = 0; j < matDoce[i].length; j++){
+                sumDoce += matDoce[i][j];
+                cDoce++;
+            }
+        }
+
+        double promDoce = (double) sumDoce / cDoce;
+
+        for(int i = 0; i < matDoce.length; i++){
+            for(int j = 0; j < matDoce[i].length; j++){
+                if(promDoce < matDoce[i][j]){
+                    coDoce++;
+                }
+            }
+        }
+
+        System.out.println(promDoce);
+        System.out.println(coDoce);
 
 
 
