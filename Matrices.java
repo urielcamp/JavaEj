@@ -1031,11 +1031,69 @@ public class Matrices {
         }
 
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 9");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
 
+        //Determinar si una matriz cuadrada es simétrica.
 
+        int[][] matNueve = {
 
+            {1, 2, 3},
+            {2, 4, 5},
+            {3, 5, 6}
 
+        };
 
+        boolean esSimetrica = true;
+
+        for(int i = 0; i< matNueve.length; i++){
+            for(int j = 0; j < matNueve[i].length; j++){
+                if(matNueve[i][j] == matNueve[j][i]){
+                    esSimetrica = true;
+                }else{
+                    esSimetrica = false;
+                    break;
+                }
+            }
+        }
+
+        if(esSimetrica){
+            System.out.println("La matriz es simetrica");
+        }else{
+            System.out.println("No es simetrica");
+        }
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 10");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Tablero de ajedrez 8x8 con 1 y 0 alternados.
+
+        int[][] matDiez = new int[8][8];
+
+        for(int i = 0; i < matDiez.length; i++){
+            for(int j = 0; j < matDiez[i].length; j++){
+                if ( i%2 == 0 && j%2 == 0) {
+                    matDiez[i][j] = 1;
+                }else if(i%2 != 0 && j%2 != 0){
+                    matDiez[i][j] = 1;
+                }else{
+                    matDiez[i][j] = 0;
+                }
+
+                System.out.print(matDiez[i][j] + " ");
+            }
+            System.out.println();
+        }
 
 
 
