@@ -954,6 +954,91 @@ public class Matrices {
         }
 
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 7");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Llenar matriz 5x5 con números consecutivos y contar múltiplos de 3.
+
+        int[][] matSiete = {
+
+            {123, 12, 32, 43, 52},
+            {62, 71, 84, 93, 101},
+            {1123, 122, 113, 14, 15},
+            {16, 17, 18, 9, 20},
+            {241, 242, 233, 214, 25}
+
+        };
+
+        int mulTres = 0;
+        int countSiete = 1;
+
+        for(int i = 0; i < matSiete.length; i++){
+            for(int j = 0; j < matSiete[i].length; j++){
+
+                matSiete[i][j] = countSiete;
+                countSiete++;
+
+                if(matSiete[i][j]%3 == 0){
+                    mulTres++;
+                }
+                
+                System.out.print(matSiete[i][j] + " ");
+            }
+            System.out.println();
+            
+        }
+
+        System.out.println("La matriz del ejercicio siete tiene " + mulTres + " Multiplos de 3");
+
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 8");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Llenar matriz con patrón:
+            //1 0 1  
+            //0 1 0  
+            //1 0 1
+
+        int[][] matOcho = new int[5][5];
+
+        for(int i = 0; i < matOcho.length; i++){
+            for(int j = 0; j < matOcho[i].length; j++){
+                if(i == j){
+                    matOcho[i][j] = 1;
+                }else if(i + j == matOcho.length - 1){
+                    matOcho[i][j] = 1;
+                }else{
+                    matOcho[i][j] = 0;
+                }
+            }
+        }
+
+                for(int i = 0; i < matOcho.length; i++){
+            for(int j = 0; j < matOcho[i].length; j++){
+                System.out.print(matOcho[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+
+
+
+
+
+
+
+
+
 
 
 
