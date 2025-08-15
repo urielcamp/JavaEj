@@ -1297,7 +1297,6 @@ public class Matrices {
                 }else if(i - j > 0){
                     matrCuatro[i][j] = 1;
                 }
-                
             }
         }
 
@@ -1307,6 +1306,178 @@ public class Matrices {
             }
             System.out.println();
         }
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 5");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Llenar matriz espiral 4x4 con números del 1 al 16.
+
+        int[][] matrCinco = new int[4][4];
+        
+        int num = 1;
+
+        int top = 0, bottom = matrCinco.length - 1;
+        int left = 0, right = matrCinco[0].length - 1;
+
+        while (top <= bottom && left <= right) {
+            
+            for (int j = left; j <= right; j++) {
+                matrCinco[top][j] = num++;
+            }
+            top++;
+
+            
+            for (int i = top; i <= bottom; i++) {
+                matrCinco[i][right] = num++;
+            }
+            right--;
+
+                        if (top <= bottom) {
+                for (int j = right; j >= left; j--) {
+                    matrCinco[bottom][j] = num++;
+                }
+                bottom--;
+            }
+
+            
+            if (left <= right) {
+                for (int i = bottom; i >= top; i--) {
+                    matrCinco[i][left] = num++;
+                }
+                left++;
+            }
+
+        }
+
+        for(int i = 0; i < matrCinco.length; i++){
+            for(int j = 0; j < matrCinco[i].length; j++){
+                System.out.print(matrCinco[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 6");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Llenar matriz serpenteante (zig-zag).
+
+        int[][] matrSeis = new int[4][4];
+        int nSeis = 1;
+
+        for(int i = 0; i < matrSeis.length; i++){
+            for(int j = 0; j < matrSeis[i].length; j++){
+                if(i == 0){ 
+                    matrSeis[i][j] = nSeis;
+                    nSeis++;
+                }else if(i%2 != 0){
+                    
+                    matrSeis[i][matrSeis.length - j - 1] = nSeis;
+                    nSeis++;
+                }else if(i%2 == 0){
+                    matrSeis[i][j] = nSeis;
+                    nSeis++;
+                }
+            }
+        }
+
+        for(int i = 0; i < matrSeis.length; i++){
+            for(int j = 0; j < matrSeis[i].length; j++){
+                System.out.print(matrSeis[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     }
 }
