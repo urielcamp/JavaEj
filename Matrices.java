@@ -1174,5 +1174,77 @@ public class Matrices {
 
 
 
+        System.out.println();
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("MATRICES DIA 4 -- PATRONES Y RETOS");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+
+        System.out.println("EJER 1");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Matriz 5x5 con una X de 1 y resto 0.
+
+        int[][] matrUno = new int[5][5];
+
+        for(int i = 0; i < matrUno.length; i++){
+            for(int j = 0; j < matrUno[i].length; j++){
+                if(i == j){
+                    matrUno[i][j] = 1;
+                }else if(j + i == matrUno.length - 1){
+                    matrUno[i][j] = 1;
+                }else
+                matrUno[i][j] = 0;
+            }
+        }
+
+        for(int i = 0; i < matrUno.length; i++){
+            for(int j = 0; j < matrUno[i].length; j++){
+                System.out.print(matrUno[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+
+
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 2");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Matriz 5x5 con borde de 1 y resto 0
+
+        int[][] matrDos = new int[5][5];
+
+        for(int i = 0; i < matrDos.length; i++){
+            for(int j = 0; j < matrDos[i].length; j++){
+                if(j == 0 || i == 0 || j == matrDos.length - 1 || i == matrDos.length - 1){
+                    matrDos[i][j] = 1;
+                }else{
+                    matrDos[i][j] = 0;
+                }
+            }
+        }
+
+        for(int i = 0; i < matrDos.length; i++){
+            for(int j = 0; j < matrDos[i].length; j++){
+                System.out.print(matrDos[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+
+
+
     }
 }
