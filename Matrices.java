@@ -1243,8 +1243,70 @@ public class Matrices {
             System.out.println();
         }
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 3");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Matriz triangular superior con 1 y resto 0. 5x5
+
+        int[][] matrTres = new int[5][5];
+
+        for(int i = 0; i < matrTres.length; i++){
+            for(int j = 0; j < matrTres[i].length; j++){
+
+                if(j == i){
+                    matrTres[i][j] = 1;
+                }else if(j - i > 0){
+                    matrTres[i][j] = 1;
+                }else if(i < matrTres.length - 4){
+                    matrTres[i][j] = 1;
+                }else{
+                    matrTres[i][j] = 0;
+                }
+            }
+        }
+
+        for(int i = 0; i < matrTres.length; i++){
+            for(int j = 0; j < matrTres[i].length; j++){
+                System.out.print(matrTres[i][j] + " ");
+            }
+            System.out.println();
+        }
 
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 4");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Matriz triangular inferior con 1 y resto 0.
+
+        int[][] matrCuatro = new int[5][5];
+
+        for(int i = 0; i < matrCuatro.length; i++){
+            for(int j = 0; j < matrCuatro[i].length; j++){
+                if(i == j){
+                    matrCuatro[i][j] = 1;
+                }else if(i - j > 0){
+                    matrCuatro[i][j] = 1;
+                }
+                
+            }
+        }
+
+        for(int i = 0; i < matrCuatro.length; i++){
+            for(int j = 0; j < matrCuatro[i].length; j++){
+                System.out.print(matrCuatro[i][j] + " ");
+            }
+            System.out.println();
+        }
 
     }
 }
