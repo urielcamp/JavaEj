@@ -1609,6 +1609,65 @@ public class Matrices {
 
 
 
+        System.out.println();
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("MATRICES DIA 5 -- RETOS FINALES");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+
+        System.out.println("EJER 1");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        
+        //Rotar matriz N×N 180°.
+
+        int[][] matrizUno = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+
+        int[][] auxUno = new int[matrizUno.length][matrizUno[0].length]; 
+
+        for(int i = 0; i < matrizUno.length; i++){
+            for(int j = 0; j < matrizUno.length; j++){
+                auxUno[i][j] = matrizUno[matrizUno.length - i - 1][matrizUno.length - j - 1];
+                
+                System.out.print(auxUno[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 2");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Rotar matriz N×N 270°.
+
+        int[][] matrizDos = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+
+        int[][] auxDos = new int[matrizDos.length][matrizDos[0].length];
+        for(int i = 0; i < matrizDos.length; i++){
+            for(int j = 0; j < matrizDos[i].length; j++){
+                auxDos[i][j] = matrizDos[j][matrizDos.length - i - 1];
+                System.out.print(auxDos[i][j] + " ");
+            }
+            System.out.println();
+        }
 
 
 
