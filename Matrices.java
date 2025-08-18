@@ -1,6 +1,6 @@
 import java.util.Scanner;
 import java.util.Random;
-
+import java.util.Arrays;
 public class Matrices {
     public static void main(String[] args) {
         System.out.println();
@@ -1472,10 +1472,74 @@ public class Matrices {
         }
 
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 9");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Matriz con potencias de 2.
+
+        int[][] matrNueve = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+
+        for(int i = 0; i < matrNueve.length; i++){
+            for(int j = 0; j < matrNueve[i].length; j++){
+                matrNueve[i][j] = matrNueve[i][j] * matrNueve[i][j];
+                System.out.print(matrNueve[i][j] + " ");
+            }
+            System.out.println();
+        }
 
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 10");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Matriz con valores de la secuencia Fibonacci.
+
+        int[][] matrDiez = new int[5][5];
+
+        
+        int[] fiboDiez = new int[matrDiez.length * matrDiez.length];
+
+        fiboDiez[0] = fiboDiez[1] = 1;
+
+        for(int i = 2; i < matrDiez.length * matrDiez.length; i++){
+            
+                fiboDiez[i] = fiboDiez[i - 1] + fiboDiez[i - 2];
+            
+        }
+
+        System.out.println(Arrays.toString(fiboDiez));
+        System.out.println();
+
+        int index = 0;
+
+        for(int i = 0; i < matrDiez.length; i++){
+            for(int j = 0; j < matrDiez[i].length; j++){
+                if(index < fiboDiez.length){
+                    matrDiez[i][j] = fiboDiez[index++];
+                }
+            }
+        }
 
 
+        for(int i = 0; i < matrDiez.length; i++){
+            for(int j = 0; j < matrDiez[i].length; j++){
+                System.out.print(matrDiez[i][j] + " ");
+        }
+            System.out.println();
+        }
 
 
 
