@@ -1529,6 +1529,7 @@ public class Matrices {
             for(int j = 0; j < matrDiez[i].length; j++){
                 if(index < fiboDiez.length){
                     matrDiez[i][j] = fiboDiez[index++];
+                    
                 }
             }
         }
@@ -1542,7 +1543,69 @@ public class Matrices {
         }
 
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 11");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
 
+        //Patrón diagonal doble.
+
+        int[][] matrOnce = new int[5][5];
+
+        for(int i = 0; i < matrOnce.length; i++){
+            for(int j = 0; j < matrOnce[i].length; j++){
+                if(i == j){
+                    matrOnce[i][j] = 1;
+                }else if(i + j == matrOnce.length - 1){
+                    matrOnce[i][j] = 1;
+                }else{
+                    matrOnce[i][j] = 0;
+                }
+            }
+        }
+
+        for(int i = 0; i < matrOnce.length; i++){
+            for(int j = 0; j < matrOnce[i].length; j++){
+                System.out.print(matrOnce[i][j] + " ");
+            
+            }
+            System.out.println();
+        }
+
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 12");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Dibujar letra “H” en matriz 5x5 con 1.
+
+        int[][] matrDoce = new int[5][5];
+
+        for(int i = 0; i < matrDoce.length; i++){
+            for(int j = 0; j < matrDoce[i].length; j++){
+                if (j == 0 || j == matrDoce.length - 1) {
+                    matrDoce[i][j] = 1;
+                }
+
+                if(i == (matrDoce.length - 1) / 2){
+                    matrDoce[i][j] = 1;
+                }
+            }
+        }
+
+        for(int i = 0; i < matrDoce.length; i++){
+            for(int j = 0; j < matrDoce[i].length; j++){
+                System.out.print(matrDoce[i][j] + " ");
+            }
+            System.out.println();
+        }
 
 
 
