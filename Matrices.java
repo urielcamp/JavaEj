@@ -1737,6 +1737,42 @@ public class Matrices {
             System.out.println("Son distintas");
         }
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 5");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Generar un laberinto simple (paredes = 1, caminos = 0).
+
+        int[][] laberinto = new int[5][5];
+
+        for(int i = 0; i < laberinto.length; i++){
+            for(int j = 0; j < laberinto[i].length; j++){
+                if (j == 0 && i == 0) {
+                    laberinto[i][j] = 0;
+                }else if (j == 0 && i == 1){
+                    laberinto[i][j] = 0;
+                }else if(i == 1 && j < 3){
+                    laberinto[i][j] = 0;
+                }else if(i == 2 && j == 2 ||i == 3 && j == 2){
+                    laberinto[i][j] = 0;
+                }else if(i == 3 && j == 1 || i == 4 && j == 1){
+                    laberinto[i][j] = 0;
+            }else{
+                laberinto[i][j] = 1;
+            }
+        }
+    }
+
+        for(int i = 0; i < laberinto.length; i++){
+            for(int j = 0; j < laberinto[i].length; j++){
+                System.out.print(laberinto[i][j] + " ");
+            }
+            System.out.println();
+        }
 
 
 
