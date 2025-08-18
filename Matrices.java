@@ -1670,10 +1670,72 @@ public class Matrices {
         }
 
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 3");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Multiplicación de matrices NxM × MxP.
+
+        int[][] matrizTresA = {
+            {1, 2, 3},
+            {4, 5, 6}
+        };
+
+        int[][] matrizTresB = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
 
 
+        for(int i = 0; i < matrizTresA.length; i++){
+            for(int j = 0; j < matrizTresA[i].length; j++){
+                matrizTresA[i][j] *= matrizTresB[i][j];
+                System.out.print(matrizTresA[i][j] + " "); 
+            }
+            System.out.println();
+        }
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 4");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
 
+        //Verificar si dos matrices son iguales.
+
+        int[][] matrizCuatroA = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 9}
+        };
+
+        int[][] matrizCuatroB = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 94}
+        };
+
+        boolean iguales = true;
+        for(int i = 0; i < matrizCuatroA.length; i++){
+            for(int j = 0; j < matrizCuatroA[i].length; j++){
+                if (matrizCuatroA[i][j] != matrizCuatroB[i][j]) {
+                    iguales = false;
+                }
+            }
+        }
+
+        if (iguales) {
+            System.out.println("Las matrices son iguales");
+        }else{
+            System.out.println("Son distintas");
+        }
 
 
 
