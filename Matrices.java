@@ -1399,6 +1399,79 @@ public class Matrices {
         }
 
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 7");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Contar cuántos números son palíndromos
+
+        int[][] matrSiete = {
+            {1, 2, 33},
+            {22, 4, 5},
+            {11, 23, 4}
+        };
+
+        int palindomo = 0;
+
+        for(int i = 0; i < matrSiete.length; i++){
+            
+            for(int j = 0; j < matrSiete[i].length; j++){
+                String numero = String.valueOf(matrSiete[i][j]);
+                for(int k = 0; k < numero.length(); k++){
+                    char charNumero = numero.charAt(k);
+                    if (numero.length() > 1 && charNumero == numero.charAt(numero.length() - k - 1)) {
+                        
+                        System.out.println(matrSiete[i][j] + " Es palindromo");
+                        palindomo++;
+                        System.out.println();
+                    }
+                }
+            }
+        }
+
+        System.out.println("Hay " + palindomo/2 + " numero palindromos en la matriz");
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 8");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Matriz donde cada elemento sea la suma de su fila + columna.
+
+        int[][] matrOcho = {
+            {1, 2, 3, 4},
+            {5, 6, 7, 8},
+            {9, 10, 11, 12},
+            {13, 14, 15, 16}
+        };
+
+        int[] sumFila = new int[matrOcho.length];
+        int[] sumColum = new int[matrOcho[0].length];
+
+        for(int i = 0; i < matrOcho.length; i++){
+            for(int j = 0; j < matrOcho.length; j++){
+                        sumFila[i] += matrOcho[i][j];
+                        sumColum[i] += matrOcho[j][i];
+                
+            }
+        }
+
+        for(int i = 0; i < matrOcho.length; i++){
+            for(int j = 0; j < matrOcho[i].length; j++){
+                matrOcho[i][j] = sumFila[i] + sumColum[j];
+                System.out.print(matrOcho[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+
 
 
 
