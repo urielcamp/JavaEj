@@ -1774,9 +1774,75 @@ public class Matrices {
             System.out.println();
         }
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 6");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
 
+        //Buscar un número en matriz ordenada.
 
+        int[][] matrizSeis = {
+            {1, 2, 3},
+            {4, 5, 6},
+            {7, 8, 1}
+        };
 
+        int nMSeis = 90; 
+        boolean esta = false;
+        int fila = 0;
+        int columna = 0;
+
+        for(int i = 0; i < matrizSeis.length; i++){
+            for(int j = 0; j < matrizSeis[i].length; j++){
+                if (matrizSeis[i][j] == nMSeis) {
+                    esta = true;
+                    fila = i;
+                    columna = j;
+                    System.out.println(nMSeis + " Esta en la fila " +  i + " y columna " + j + " de la matriz");
+                }
+            }
+        }
+
+        if (!esta) {
+            System.out.println(nMSeis + " No esta en la matriz");
+        }
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 7");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Sumar diagonal principal y restar la secundaria.
+
+        int[][] matrizSiete = {
+            {1, 2, 3, 4, 5},
+            {6, 7, 8, 9, 10},
+            {11, 12, 13, 14, 15},
+            {16, 17, 18, 19, 20},
+            {21, 22, 23, 24, 25}
+        };
+        int sumaPrincipal = 0;
+        int restaSecundaria = 0;
+        for(int i = 0; i < matrizSiete.length; i++){
+            for(int j = 0; j < matrizSiete[i].length; j++){
+                if(i == j){
+                    sumaPrincipal += matrizSiete[i][j];
+                }
+
+                if(j + i == matrizSiete.length - 1){
+                    restaSecundaria = matrizSiete[i][j] - restaSecundaria; 
+                }
+            }
+        }
+
+        System.out.println(sumaPrincipal);
+        System.out.println(restaSecundaria);
 
 
 
