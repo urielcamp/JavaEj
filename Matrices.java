@@ -1921,12 +1921,45 @@ public class Matrices {
 
 
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 10");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
 
 
+        //Determinar si la matriz es identidad.
 
 
+        int[][] matrizDiez = {
+            {1, 0, 0},
+            {0, 1, 0},
+            {0, 1, 1}
+        };
 
+        boolean identidad = true;
+        for(int i = 0; i < matrizDiez.length; i++){
+            for(int j = 0; j < matrizDiez[i].length; j++){
+                if(i == j){
+                    if (matrizDiez[i][j] != 1) {
+                        identidad = false;
+                    }
+                }
+                if( i != j){
+                    if(matrizDiez[i][j] != 0){
+                        identidad = false;
+                    }
+                }
+            }
+        }
 
+        if (identidad) {
+            System.out.println("La matriz es identidad");
+        }else{
+            System.out.println("La matriz no es identidad");
+        }
 
 
 
