@@ -1845,9 +1845,79 @@ public class Matrices {
         System.out.println(restaSecundaria);
 
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 8");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Intercambiar dos filas específicas.
+
+        int[][] matrizOcho = {
+            {1, 2, 3, 4},
+            {5, 6, 7, 8},
+            {9, 10, 11, 12},
+            {13, 14, 15, 16}
+        };
+
+        int filaA = 0;
+        int filaB = 3;
+        int auxiliarOcho = 0; 
+
+        for(int i = 0; i < matrizOcho.length; i++){
+            for(int j = 0; j < matrizOcho[i].length; j++){
+                if (i == filaA) {
+                    auxiliarOcho = matrizOcho[filaA][j];
+                    matrizOcho[filaA][j] = matrizOcho[filaB][j]; 
+                    matrizOcho[filaB][j] = auxiliarOcho;
+                }
+                    
+            
+            
+                System.out.print(matrizOcho[i][j] + " ");
+            }
+            System.out.println();
+        }
 
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 9");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
 
+        //Intercambiar dos columnas específicas.
+
+        int[][] matrizNueve = {
+            {1, 2, 3, 4},
+            {5, 6, 7, 8},
+            {9, 10, 11, 12},
+            {13, 14, 15, 16}
+        };
+
+        int columnaA = 0;
+        int columnaB = 3;
+
+        int auxiliarNueve = 0;
+
+        for(int i = 0; i < matrizNueve.length; i++){
+            for(int j = 0; j < matrizNueve[i].length; j++){
+
+                if(j == columnaA){
+
+                
+                auxiliarNueve = matrizNueve[i][columnaA];
+                matrizNueve[i][columnaA] = matrizNueve[i][columnaB];
+                matrizNueve[i][columnaB] = auxiliarNueve;
+                }
+                System.out.print(matrizNueve[i][j] + " ");
+            }
+            System.out.println();
+        }
 
 
 
