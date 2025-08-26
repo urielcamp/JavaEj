@@ -61,8 +61,45 @@ public class Algoritmos {
 
         System.out.println("El numero " + nDos + " aparece " + cDos + " veces en el array");
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 3");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
 
+        //Encontrar la posición de la primera aparición de un número.
 
+        int[] aTres = {3, 1, 2, 3, 3, 4, 6, 3};
+        int nTres = 3;
+
+        for(int i = 0; i < aTres.length; i++){
+            if (aTres[i] == nTres) {
+                System.out.println(nTres + " aparece por primera vez en la posicion " + i);
+                break;
+            }
+        }
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 4");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Encontrar la posición de la última aparición de un número.
+
+        int[] aCuatro = {1, 2, 3, 4, 5, 2, 46};
+        int nCuatro = 2;
+
+        for(int i = aCuatro.length - 1; i >= 0; i--){
+            if(aCuatro[i] == nCuatro){
+                System.out.println(nCuatro + " aparece en la posicion " + i + " por ultima vez");
+                break;
+            }
+        }
 
 
 
