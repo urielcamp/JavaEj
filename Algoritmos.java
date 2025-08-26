@@ -101,10 +101,50 @@ public class Algoritmos {
             }
         }
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 5");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Determinar si un arreglo contiene solo números positivos.
+
+        int[] aCinco = {1, 2, 3, 4, 5};
+        boolean nPositivosCinco = true;
+
+        for(int i = 0; i < aCinco.length; i++){
+            if (aCinco[i] < 0) {
+                nPositivosCinco = false;
+                System.out.println("El array tiene numero negativos");
+                break;
+            }
+        }
+
+        if (nPositivosCinco) {
+            System.out.println("El array solo tiene numeros positivos");
+        }
 
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 6");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Determinar si un arreglo contiene algún número negativo.
 
 
+        int[] aSeis = {1, 2, -3, 4, -5};
+
+        for(int i = 0; i < aSeis.length; i++){
+            if (aSeis[i] < 0) {
+                System.out.println("El array contiene el numero " + aSeis[i]);
+            }
+        }
 
 
 
