@@ -147,7 +147,61 @@ public class Algoritmos {
         }
 
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 7");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
 
+        //Buscar un carácter en un arreglo de caracteres
+
+        char[] aSiete = {'a', 'e', 'i', 'o', 'u'};
+        char nSiete = 'a';
+        boolean eSiete = false;
+
+        for(int i = 0; i < aSiete.length; i++){
+            if (aSiete[i] == nSiete) {
+                eSiete = true;
+                System.out.println("el caracter " + nSiete + " esta en la posicion " + i);
+                break;
+            }
+        }
+
+        if (!eSiete) {
+                System.out.println("El caracter no esta en el arreglo");
+            }
+
+            
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 8");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Buscar una palabra en un arreglo de Strings.
+
+        String[] aOcho = {"Yo", "Tu", "El", "Nosotros"};
+        String nOcho = "Yo";
+        boolean eOcho = true;
+
+        for(int i = 0; i < aOcho.length; i++){
+            if (aOcho[i] == nOcho) {
+                eOcho = false;
+                System.out.println("La palabra " +   nOcho + " esta en el array");
+                break;
+            }else{
+                eOcho = true; 
+            }
+        }
+
+        if (eOcho) {
+            System.out.println("La palabra no esta en el array");
+        }
 
 
 
