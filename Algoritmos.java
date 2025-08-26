@@ -194,14 +194,54 @@ public class Algoritmos {
                 eOcho = false;
                 System.out.println("La palabra " +   nOcho + " esta en el array");
                 break;
-            }else{
-                eOcho = true; 
             }
         }
 
         if (eOcho) {
             System.out.println("La palabra no esta en el array");
         }
+
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 9");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Encontrar el número mayor en un arreglo.
+
+        int[] aNueve = {1, 2, 33, 4, 2, 56, 6};
+        int mayorNueve = aNueve[0];
+
+
+        for(int i = 0; i < aNueve.length; i++){
+            if (aNueve[i] >= mayorNueve) {
+                mayorNueve = aNueve[i];
+            }
+        }
+
+        System.out.println(mayorNueve);
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 10");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        int[] aDiez = {1, 2, -34, 56, 2, 0, -9, 32};
+        int menorDiez = aDiez[0];
+
+        for(int i = 0; i < aDiez.length; i++){
+            if (aDiez[i] <= menorDiez) {
+                menorDiez = aDiez[i];
+            }
+        }
+
+        System.out.println(menorDiez);
 
 
 
