@@ -1,0 +1,78 @@
+public class Algoritmos {
+    public static void main(String[] args) {
+        
+
+        System.out.println();
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("ALGORITMOS DIA 1 -- BUSQUEDA SECUENCIAL");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        System.out.println("EJER 1");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Buscar un número en un arreglo y decir si está o no.
+
+        int[] aUno = {1, 9, 3, 4, 5, 6, 7, 11, 8, 10};
+
+        boolean esta = true;
+        int nUno = 8;
+
+        for(int i = 0; i < aUno.length; i++){
+            if (aUno[i] == nUno) {
+                esta = true;
+                System.out.println(nUno + " esta en el arreglo en la posicion " + i);
+                break;
+            }else{
+                esta = false;
+            }
+
+        }
+
+        if (!esta) {
+            System.out.println(nUno + " no esta en el arreglo");
+        }
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 2");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Contar cuántas veces aparece un número en un arreglo.
+
+        int[] aDos = {1, 2, 3, 4, 3, 4, 5, 6, 6, 6, 6, 7, 8};
+        int nDos = 3;
+        int cDos = 0;
+
+
+        for(int i = 0; i < aDos.length; i++){
+            if (aDos[i] == nDos) {
+                cDos++;
+            }
+        }
+
+        System.out.println("El numero " + nDos + " aparece " + cDos + " veces en el array");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+}
