@@ -244,6 +244,317 @@ public class Algoritmos {
         System.out.println(menorDiez);
 
 
+        
+        System.out.println();
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("ALGORITMOS DIA 2 -- BUSQUEDA BINARIA");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 1");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Implementar búsqueda binaria para un número en un arreglo ordenado.
+
+        int[] arUno = {1, 2, 3, 4, 5};
+
+        int mUno = 2;
+
+        int lowUno = 0;
+        int highUno = arUno.length - 1;
+
+        boolean bUno = true;
+
+        while (lowUno<=highUno) {
+            int mid = lowUno + (highUno - lowUno) / 2;
+            if (arUno[mid] == mUno) {
+                System.out.println("se encontro el elemento" + " " + arUno[mid]);
+                bUno = false;
+                break;
+            }else if(arUno[mid] < mUno){
+                lowUno = mid + 1;
+            }else {
+                highUno = mid - 1;
+            }
+            
+        }
+
+        if (bUno) {
+            System.out.println("Elemento no encontrado");
+        }
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 2");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Contar cuántas comparaciones se realizan en una búsqueda binaria.
+
+        int[] arDos = {1, 22, 23, 3, 4, 3, 2, 22, 21};
+
+        int lowDos = 0;
+        int highDos = arDos.length - 1;
+
+        int mDos = 21;
+        int conDos = 0;
+
+        while (lowDos <= highDos) {
+            int mid = lowDos + (highDos - lowDos) / 2;
+            if (arDos[mid] == mDos) {
+                System.out.println("Elemento " + mDos + " encontrado");
+                break;
+            }else if(arDos[mid] < mDos){
+                lowDos = mid + 1;
+            }else{
+                highDos = mid - 1;
+            }
+            conDos++;
+        }
+
+        System.out.println(conDos);
+
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 3");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Usar búsqueda binaria para encontrar el índice de un número.
+
+        int[] arTres = {1, 2, 3, 4, 5, 6, 7, 8};
+
+        int lowTres = 0;
+        int highTres = arTres.length - 1;
+
+        int mTres = 8;
+
+        int indice = 0;
+
+
+        while (lowTres <= highTres) {
+            int mid = lowTres + (highTres - lowTres) / 2;
+            if (arTres[mid] == mTres) {
+                indice = mid;
+                break;
+            }else if(arTres[mid] < mTres){
+                lowTres = mid + 1;
+            }else if(arTres[mid] > mTres){
+                highTres = mid - 1;
+            }
+        }
+
+        System.out.println(indice);
+
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 4");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Modificar la búsqueda binaria para encontrar la primera aparición de un número repetido.
+
+        int[] arCuatro = {1, 2, 3, 4, 4, 5, 6, 6, 6, 7, 8, 9};
+
+        int lowCuatro = 0;
+        int highCuatro = arCuatro.length - 1;
+
+        int mCuatro = 6;
+        int indCuatro = -1;
+
+        while(lowCuatro <= highCuatro) {
+            int mid = lowCuatro + (highCuatro - lowCuatro) / 2;
+
+            if (arCuatro[mid] == mCuatro) {
+                indCuatro = mid;
+                highCuatro = mid - 1;
+            }else if(arCuatro[mid] < mCuatro){
+                lowCuatro = mid + 1;
+            }else if(arCuatro[mid] > mCuatro){
+                highCuatro = mid - 1;
+            }
+        }
+
+        if (indCuatro != - 1) {
+            System.out.println(mCuatro + " en posicion " + indCuatro);
+        }else{
+            System.out.println("no se encontro el numero");
+        }
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 5");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Modificar para encontrar la última aparición de un número repetido.
+
+        int[] arCinco = {1, 2, 2, 2, 3, 4, 5, 6, 7, 8, 8, 8};
+
+        int lowCinco = 0;
+        int highCinco = arCinco.length - 1;
+
+        int mCinco = 2;
+        int ixCinco = -1;
+
+        while (lowCinco <= highCinco) {
+            int mid = lowCinco + (highCinco - lowCinco) / 2;
+            if (arCinco[mid] == mCinco) {
+                //System.out.println("encontrado");
+                ixCinco = mid;
+                lowCinco = mid + 1;
+                break;
+            }else if(arCinco[mid] < mCinco){
+                //System.out.println("No encontrado");
+                lowCinco = mid - 1;
+            }else if(arCinco[mid] > mCinco){
+                //System.out.println("Casi encontrado");
+                highCinco = mid + 1;
+            }
+        }
+
+        if (ixCinco != -1) {
+            System.out.println(mCinco + " en la posicion " + ixCinco);
+        }else{
+            System.out.println("No se encontro el numero");
+        }
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 6");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Buscar un carácter en un arreglo de caracteres ordenado.
+
+        char[] arSeis = {'a', 'e', 'i', 'o', 'u'};
+
+        int lowSeis = 0;
+        int highSeis = arSeis.length - 1;
+
+        char mSeis = 'u';
+        int ixSeis = -1;
+
+        while (lowSeis <= highSeis) {
+            int mid = lowSeis + (highSeis - lowSeis) / 2;
+            if (arSeis[mid] == mSeis) {
+                
+                ixSeis = mid;
+                break;
+            }else if(arSeis[mid] < mSeis){
+                
+                lowSeis = mid + 1;
+            }else if(arSeis[mid] > mSeis){
+                
+                highSeis = mid - 1;
+            }
+        }
+
+        if (ixSeis != -1) {
+            System.out.println(mSeis + " esta en la posicion " + ixSeis);
+        }else{
+            System.out.println("no se encontro el caracter");
+        }
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 7");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Buscar una palabra en un arreglo de Strings ordenado.
+
+        String[] arSiete = {"ah", "bh", "ch", "dh", "eh", "hh"};
+
+        int lowSiete = 0;
+        int highSiete = arSiete.length -1;
+
+        String mSiete = "hh";
+        int ixSiete = -1;
+
+        while (lowSiete <= highSiete) {
+            int mid = lowSiete + (highSiete - lowSiete) / 2;
+            int c = arSiete[mid].compareTo(mSiete);
+            if(c == 0){
+                ixSiete = mid;
+                System.out.println(mSiete + " en posicion " + ixSiete);
+                break;
+            }else if(c < 0){
+                lowSiete = mid + 1;
+            }else if(c > 0){
+                highSiete = mid - 1;
+            }
+            ixSiete = mid;
+        }
+
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 8");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Verificar si un número está dentro de un rango usando búsqueda binaria.
+        
+        int[] arOcho = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+        int lowOcho = 0;
+        int highOcho = arOcho.length - 1;
+
+        int mOcho = 10;
+        int rangoMin = 6;
+        int rangoMax = 9;
+
+        int ixOcho = -1;
+
+        while(lowOcho <= highOcho){
+            int mid = lowOcho + (highOcho - lowOcho) / 2;
+            if(mOcho > rangoMin && mOcho < rangoMax){
+                ixOcho = mid;
+                System.out.println(mOcho + " esta en el rango y en la posicion " + ixOcho);
+                break;
+
+            }else if(arOcho[mid] < mOcho){
+                    lowOcho = mid + 1;
+
+            }else if(arOcho[mid] > mOcho){
+                    highOcho = mid - 1;
+
+            }
+            if (lowOcho == highOcho) {
+                System.out.println("No esta en rango");
+                break;
+            }
+        }
+
+
+
+
+
+        }
     }
-}
+
