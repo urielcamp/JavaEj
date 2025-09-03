@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Algoritmos {
     public static void main(String[] args) {
         
@@ -533,7 +535,7 @@ public class Algoritmos {
 
         while(lowOcho <= highOcho){
             int mid = lowOcho + (highOcho - lowOcho) / 2;
-            if(mOcho > rangoMin && mOcho < rangoMax){
+            if(mOcho >= rangoMin && mOcho <= rangoMax){
                 ixOcho = mid;
                 System.out.println(mOcho + " esta en el rango y en la posicion " + ixOcho);
                 break;
@@ -550,6 +552,73 @@ public class Algoritmos {
                 break;
             }
         }
+
+
+
+                System.out.println();
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("ALGORITMOS DIA 3 -- ORDENAMIENTOS SIMPLES");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        System.out.println("EJER 1");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Implementar ordenamiento burbuja ascendente.
+
+        int[] arrUno = {1, 23, 3, 2, 4, 56, 43, 21, 5, 3, 44, 657};
+
+        for(int i = 0; i < arrUno.length - 1; i++){
+            for(int j = 0; j < arrUno.length - i - 1; j++){
+                if (arrUno[j] > arrUno[j + 1]) {
+                    int temp = arrUno[j];
+                    arrUno[j] = arrUno[j + 1];
+                    arrUno[j + 1] = temp;
+                }
+            }
+        }
+
+        System.out.println(Arrays.toString(arrUno));
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 2");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Implementar ordenamiento burbuja descendente.
+
+        int[] arrDos = {1, 23, 42, 12, 23, 2, 2, 3, 4, 3435, 34, 5, 67, 8, 6};
+
+        for(int i = 0; i < arrDos.length - 1; i++){
+            for(int j = 0; j < arrDos.length - i - 1; j++){
+                if (arrDos[j] < arrDos[j + 1]) {
+                    int temp = arrDos[j];
+                    arrDos[j] = arrDos[j + 1];
+                    arrDos[j + 1] = temp;
+                }
+            }
+        }
+
+        System.out.println(Arrays.toString(arrDos));
+
+
+
+
+
+
+
+
+
+
+
 
 
 
