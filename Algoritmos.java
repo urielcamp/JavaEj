@@ -609,20 +609,245 @@ public class Algoritmos {
 
         System.out.println(Arrays.toString(arrDos));
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 3");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Optimizar burbuja para detenerse si ya está ordenado.
+
+        int[] arrTres = {1, 2, 3, 4, 5, 6, 7, 8, 93, 2};
+        int cTres = 0;
+        boolean intercambio = false;
+
+        for(int i = 0; i < arrTres.length - 1; i++){
+            for(int j = 0; j < arrTres.length - i - 1; j++){
+                if (arrTres[j] > arrTres[j + 1]) {
+                    int temp = arrTres[j];
+                    arrTres[j] = arrTres[j + 1];
+                    arrTres[j + 1] = temp;
+                    cTres++;
+                    intercambio = true;
+                }
+            }
+            if(!intercambio) {
+                break;
+            }
+        }
+
+        System.out.println(Arrays.toString(arrTres));
+        System.out.println(cTres);
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 4");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Implementar ordenamiento por selección ascendente.
+
+        int[] arrCuatro = {12, 1, 2, 23, 42, 12, 25, 8, 90, 7};
+
+        for(int i = 0; i < arrCuatro.length - 1; i++){
+            int minIndex = i;
+            for(int j = i + 1; j < arrCuatro.length; j++){
+                if (arrCuatro[j] < arrCuatro[minIndex]) {
+                    minIndex = j;
+                }
+            }
+            int temp = arrCuatro[minIndex];
+            arrCuatro[minIndex] = arrCuatro[i];
+            arrCuatro[i] = temp;
+        }
+
+        System.out.println(Arrays.toString(arrCuatro));
+
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 5");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Implementar selección descendente.
+        int[] arrCinco = {12, 2, 12, 1, 32, 14, 53, 23, 5, 6};
+
+        for(int i = 0; i < arrCinco.length - 1; i++){
+            int minIndex = i;
+            for(int j = i + 1; j < arrCinco.length; j++){
+                if (arrCinco[j] > arrCinco[minIndex]) {
+                    minIndex = j;
+                }
+            }
+            int temp = arrCinco[minIndex];
+            arrCinco[minIndex] = arrCinco[i];
+            arrCinco[i] = temp;
+        }
+
+        System.out.println(Arrays.toString(arrCinco));
+
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 6");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Implementar ordenamiento por inserción ascendente.
+
+        int[] arrSeis = {1, 21, 12, 2, 34, 23, 5, 4, 3};
+
+        for(int i = 1; i < arrSeis.length; i++){
+            int key = arrSeis[i];
+            int j = i - 1;
+            while (j >= 0 && arrSeis[j] > key) {
+                arrSeis[j + 1] = arrSeis[j];
+                j--;
+            }
+            arrSeis[j + 1] = key;
+        }
+        System.out.println(Arrays.toString(arrSeis));
+    
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 7");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Implementar inserción descendente
+
+
+        int[] arrSiete = {1, 2, 4, 32, 12, 23, 4, 56};
+
+        for(int i = 1; i < arrSiete.length; i++){
+            int key = arrSiete[i];
+            int j = i - 1;
+            while (j >= 0 && arrSiete[j] < key) {
+                arrSiete[j + 1] = arrSiete[j];
+                j--; 
+            }
+            arrSiete[j + 1] = key;
+        }
+
+        System.out.println(Arrays.toString(arrSiete));
+
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 8");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Ordenar un arreglo de Strings alfabéticamente (usando burbuja).
+
+        String[] arrOcho = {"ah", "bh", "dh", "uh", "ch"};
+
+        for(int i = 0; i < arrOcho.length - 1; i++){
+            for(int j = 0; j < arrOcho.length - i - 1; j++){
+                int c = arrOcho[j].compareTo(arrOcho[j + 1]);
+                if (c > 0) {
+                    String temp = arrOcho[j];
+                    arrOcho[j] = arrOcho[j + 1];
+                    arrOcho[j + 1] = temp;
+                }
+            }
+        }
+
+        System.out.println(Arrays.toString(arrOcho));
 
 
 
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 9");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Ordenar un arreglo de caracteres (usando selección).
+
+        char[] arrNueve = {'s', 'a', 'h', 'b', 'g', 'c'};
+
+        for(int i = 0; i < arrNueve.length - 1; i++){
+            int minIndex = i;
+            for(int j = i + 1; j < arrNueve.length; j++){
+                if (arrNueve[j] < arrNueve[minIndex]) {
+                    minIndex = j;
+                }
+            }
+
+            char temp = arrNueve[minIndex];
+            arrNueve[minIndex] = arrNueve[i];
+            arrNueve[i] = temp;
+        }
+
+        System.out.println(Arrays.toString(arrNueve));
 
 
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 10");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
 
+        //Comparar la cantidad de intercambios entre burbuja y selección
 
+        int[] arrDiezA = {12, 1, 32, 23, 4, 5, 76, 8, 6};
+        int[] arrDiezB = {12, 1, 32, 23, 4, 5, 76, 8, 6};
 
+        int cBurbuja = 0;
+        int cSelection = 0;
 
+        //Burbuja
+        for(int i = 0; i < arrDiezA.length - 1; i++){
+            for(int j = 0; j < arrDiezA.length - i - 1; j++){
+                if (arrDiezA[j] > arrDiezA[j + 1]) {
+                    int temp = arrDiezA[j];
+                    arrDiezA[j] = arrDiezA[j + 1];
+                    arrDiezA[j + 1] = temp;
+                    cBurbuja++;
+                }
+            }
+        }
 
+        //Selection
 
+        for(int i = 0; i < arrDiezB.length - 1; i++){
+            int minIndex = i;
+            for(int j = i + 1; j < arrDiezB.length; j++){
+                if (arrDiezB[j] < arrDiezB[minIndex]) {
+                    minIndex = j;
+                }
+            }
+            int temp = arrDiezB[minIndex];
+            arrDiezB[minIndex] = arrDiezB[i];
+            arrDiezB[i] = temp;
+            cSelection++;
+        }
 
+        System.out.println("Burbuja: " + Arrays.toString(arrDiezA));
+        System.out.println(cBurbuja);
+        System.out.println();
+        System.out.println("Selection: " + Arrays.toString(arrDiezB));
+        System.out.println(cSelection);
 
         }
     }
