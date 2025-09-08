@@ -959,6 +959,216 @@ public class Algoritmos {
 
         System.out.println(Arrays.toString(arryDos));
 
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 3");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Implementar Quick Sort para ordenar números.
+
+        int[] arryTres = {22, 23, 3, 2, 12, 34, 1, 2};
+
+        if (arryTres.length > 1) {
+            int[] stack = new int[arryTres.length * 2];
+            int top = -1;
+
+            stack[++top] = 0;
+            stack[++top] = arryTres.length - 1;
+
+            while (top >= 0) {
+                int hi = stack[top--];
+                int lo = stack[top--];
+
+                if (lo >= hi) {
+                    continue;
+                }
+
+                int pivot = arryTres[hi];
+                int i = lo;
+
+                for(int j = lo; j < hi; j++){
+                    if ((arryTres[j] <= pivot)) {
+                        
+                        int tmp = arryTres[i];
+                        arryTres[i] = arryTres[j];
+                        arryTres[j] = tmp;
+                        i++;
+                    }
+                }
+
+                int tmp = arryTres[i];
+                arryTres[i] = arryTres[hi];
+                arryTres[hi] = tmp;
+                int p = i;
+
+                if (p + 1 < hi) {
+                    stack[++top] = p + 1;
+                    stack[++top] = hi;
+                }
+
+                if (lo < p - 1) {
+                    stack[++top] = lo;
+                    stack[++top] = p - 1;
+                }
+
+
+            }
+        }
+
+        System.out.println(Arrays.toString(arryTres));
+
+
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 4");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Implementar Quick Sort para Strings.
+
+        String[] arryCuatro = {"gh", "ah", "fh", "ch"};
+
+        if (arryCuatro.length > 1) {
+            
+            int[] stack = new int[arryCuatro.length * 2];
+            int top = -1;
+
+            stack[++top] = 0;
+            stack[++top] = arryCuatro.length - 1;
+            
+            while (top >= 0) {
+                int hi = stack[top--];
+                int lo = stack[top--];
+
+                if (lo >= hi) {
+                    continue;
+                }
+
+                String pivot = arryCuatro[hi];
+                int i = lo;
+
+                for(int j = lo; j < hi; j++){
+                    if (arryCuatro[j].compareTo(pivot) <= 0) {
+                        String tpm = arryCuatro[i];
+                        arryCuatro[i] = arryCuatro[j];
+                        arryCuatro[j] = tpm;
+                        i++;
+                    }
+                }
+
+                String tmp = arryCuatro[i];
+                arryCuatro[i] = arryCuatro[hi];
+                arryCuatro[hi] = tmp;
+                int p = i;
+
+                if (p + 1 < hi) {
+                    stack[++top] = p + 1;
+                    stack[++top] = hi;
+                }
+
+                if (lo < p - 1) {
+                    stack[++top] = lo;
+                    stack[++top] = p - 1;
+                }
+            }
+        }
+
+        System.out.println(Arrays.toString(arryCuatro));
+
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 5");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        ////Modificar Quick Sort para ordenar descendente.
+
+        int[] arryCinco = {12, 23, 2, 3, 2, 1, 5, 6, 9, 87};
+
+
+        if (arryCinco.length > 1) {
+            int[] stack = new int[arryCinco.length * 2];
+            int top = -1;
+
+            stack[++top] = 0;
+            stack[++top] = arryCinco.length - 1;
+
+            while(top >= 0){
+                int hi = stack[top--];
+                int lo = stack[top--];
+
+                if (lo >= hi) {
+                    continue;
+                }
+
+                int pivot = arryCinco[hi];
+                int i = lo;
+
+                for(int j = lo; j < hi; j++){
+                    if (arryCinco[j] >= pivot) {
+                        int tmp = arryCinco[i];
+                        arryCinco[i] = arryCinco[j];
+                        arryCinco[j] = tmp;
+                        i++;
+                    }
+                }
+
+                int tmp = arryCinco[i];
+                arryCinco[i] = arryCinco[hi];
+                arryCinco[hi] = tmp;
+                int p = i; 
+
+                if (p + 1 < hi) {
+                    stack[++top] = p + 1;
+                    stack[++top] = hi;
+                }
+
+                if (lo < p - 1) {
+                    stack[++top] = lo;
+                    stack[++top] = p - 1;
+                }
+            }
+        }
+
+        System.out.println(Arrays.toString(arryCinco));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         }
     }
+
+
+
 
