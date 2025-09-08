@@ -555,7 +555,7 @@ public class Algoritmos {
 
 
 
-                System.out.println();
+        System.out.println();
         System.out.println();
         System.out.println("---------------------------------");
         System.out.println();
@@ -848,6 +848,116 @@ public class Algoritmos {
         System.out.println();
         System.out.println("Selection: " + Arrays.toString(arrDiezB));
         System.out.println(cSelection);
+
+
+        System.out.println();
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("ALGORITMOS DIA 4 -- ORDENAMIENTOS EFICIENTES");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        System.out.println("EJER 1");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+
+        //Implementar Merge Sort para ordenar números.
+
+        int[] arryUno = {12, 1, 23, 4, 3, 5, 7, 6, 9};
+
+        int[] auxUno = new int[arryUno.length];
+
+        for(int i = 1; i < arryUno.length; i*=2){
+            for(int j = 0; j < arryUno.length - i; j += i * 2){
+                int mid = j + i - 1;
+                int hi = Math.min(j + i * 2 - 1, arryUno.length - 1);
+
+
+                int izq = j;
+                int der = mid + 1;
+                int k = j;
+
+                while(izq <= mid && der <= hi){
+                    if (arryUno[izq] <= arryUno[der]) {
+                        auxUno[k++] = arryUno[izq++];
+                    }else {
+                        auxUno[k++] = arryUno[der++];
+                    }
+                }
+
+                while (izq <= mid) {
+                    auxUno[k++] = arryUno[izq++];
+                }
+
+                while (der <= hi) {
+                    auxUno[k++] = arryUno[der++];
+                }
+
+                for(int m = j; m <= hi; m++){
+                    arryUno[m] = auxUno[m];
+                }
+            }
+        }
+
+        System.out.println(Arrays.toString(arryUno));
+
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 2");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Implementar Merge Sort para Strings.
+
+        String[] arryDos = {"eh", "bh", "dh", "ch", "ah"};
+
+        String[] auxDos = new String[arryDos.length];
+
+
+
+        for(int i = 1; i < arryDos.length; i *= 2){
+            for(int j = 0; j < arryDos.length - i; j += i * 2){
+
+                
+
+
+                int mid = j + i - 1;
+                int hi = Math.min(j + i * 2 - 1, arryDos.length - 1);
+
+                int izq = j;
+                int der = mid + 1;
+                int k = j;
+
+                while (izq <= mid && der <= hi) {
+                    if(arryDos[izq].compareTo(arryDos[der]) <=0){
+                        auxDos[k++] = arryDos[izq++];
+                    }else{
+                        auxDos[k++] = arryDos[der++];
+                    }
+                }
+
+                while (izq <= mid) {
+                    auxDos[k++] = arryDos[izq++];
+                }
+
+                while (der <= hi) {
+                    auxDos[k++] = arryDos[der++];
+                }
+
+                for(int m = j; m <= hi; m++){
+                    arryDos[m] = auxDos[m];
+                }
+            }
+        }
+
+        System.out.println(Arrays.toString(arryDos));
 
         }
     }
