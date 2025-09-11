@@ -1143,11 +1143,123 @@ public class Algoritmos {
         System.out.println(Arrays.toString(arryCinco));
 
 
+        System.out.println();
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("ALGORITMOS DIA 5 -- RETOS COMBINADOS");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        System.out.println("EJER 1");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Ordenar una arreglo de nombres y buscar uno específico.
+
+        String[] nombres = {"Bruno", "Axel", "Alejandro", "Franco", "Jazmin", "Luna", "Esteban"};
+        
+        String nNombre = "Franco";
+
+        boolean eUno = false;
+
+        for(int i = 0; i < nombres.length - 1; i++){
+            if (nombres[i] == nNombre) {
+                eUno = true;
+            }
+            for(int j = 0; j < nombres.length - i - 1; j++){ 
+                int c = nombres[j].compareTo(nombres[j + 1]);
+                if (c > 0) {
+                    String tmp = nombres[j];
+                    nombres[j] = nombres[j+1];
+                    nombres[j+1] = tmp;
+                }
+            }
+        }
+
+        if (eUno) {
+            System.out.println(nNombre + " Esta en el arreglo");
+        }else{
+            System.out.println("No esta en el arreglo");
+        }
+
+        System.out.println(Arrays.toString(nombres));
 
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 2");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Ordenar un arreglo de temperaturas y encontrar la mínima y máxima.
+
+        int[] temperaturas = {21, 30, 19, 11, -4, 40, 3};
+
+        int tempMin = temperaturas[0];
+        int tempMax = temperaturas[0];
+
+        int[] temp = new int[2];
+
+        for(int i = 0; i < temperaturas.length - 1; i++){
+            for(int j = 0; j < temperaturas.length - i - 1; j++){
+
+                if (tempMin > temperaturas[j]) {
+                    tempMin = temperaturas[j];
+                    temp[0] = tempMin;
+                }
+
+                if (tempMax < temperaturas[j]) {
+                    tempMax = temperaturas[j];
+                    temp[1] = tempMax;
+                }
 
 
+                if (temperaturas[j] > temperaturas[j+1]) {
+                    int tmp = temperaturas[j];
+                    temperaturas[j] = temperaturas[j + 1];
+                    temperaturas[j + 1] = tmp;
+                }
+            }
+        }
 
+        System.out.println(Arrays.toString(temperaturas));
+        System.out.println(Arrays.toString(temp));
+
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 3");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Buscar si dos arreglos tienen al menos un número en común.
+
+        int[] arrayUno = {12, 32, 45, 32, 1, 2, 452, 9};
+        int[] arrayDos = {21, 4, 5667, 4346, 75854, 234, 9983, 22};
+        boolean elementoComun = false;
+
+        for(int i  = 0; i < arrayUno.length; i++){
+            for(int j = 0; j < arrayDos.length; j++){
+                if (arrayUno[i] == arrayDos[j]) {
+                    elementoComun = true;
+                    System.out.println("Tienen al menos un elemento en comun el cual es: " + arrayDos[j]);
+                    break;
+                    
+                }
+                }
+            }
+
+            if (!elementoComun) {
+                System.out.println("No hay elementos en comun");
+            }
+        
 
 
 
