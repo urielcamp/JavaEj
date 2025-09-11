@@ -1319,18 +1319,150 @@ public class Algoritmos {
         System.out.println(Arrays.toString(arrayA));
         System.out.println(Arrays.toString(arrayB));
         
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 5");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Buscar el segundo número más grande en un arreglo.
+
+        int[] arrayCinco =  { 21, 23, 1, 24, 3, 56, 80, 23, 2, 14};
+        int max = arrayCinco[0];
+        int c = 0;
+        int auxMax = arrayCinco[0];
+
+        for(int i = 0; i < arrayCinco.length - 1; i++){
+            
+            for(int j = 0; j < arrayCinco.length; j++){
+
+                if (max < arrayCinco[j]) {
+                    max = arrayCinco[j];
+                    c = j;
+                }
+            }
+
+            if (i != c) {
+                if (auxMax < arrayCinco[i]) {
+                    auxMax = arrayCinco[i];
+                }
+            }
+            
+        }
+        
+        
+        System.out.println("El segundo valor mas grande del arreglo es: " + auxMax);
 
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 6");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Buscar el segundo número más pequeño en un arreglo.
+
+        int[] arraySeis = {12, 2, -8, -5, 24, 38, 9};
+
+        int min = arraySeis[0];
+        int auxMin = arraySeis[0];
+        int cSeis = 0;
+
+        for(int i = 0; i < arraySeis.length; i++){
+            
+            for(int j = 0; j < arraySeis.length; j++){
+                if (min > arraySeis[j]) {
+                    min = arraySeis[j];
+                    cSeis++;
+                }
+            }
+
+            if (i != cSeis) {
+                if (auxMin > arraySeis[i]) {
+                    auxMin = arraySeis[i];
+                }
+            }
+        }
+
+        System.out.println("El segundo menor del arreglo es: " + auxMin);
 
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 7");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
 
+        //Ordenar una lista de palabras y contar cuántas empiezan con vocal.
 
+        String[] palabras = {"Hola", "Florero", "Cascada", "Alfombra", "Opera", "Buzo", "Amigo", "Enemigo"};
+        int vocales = 0;
 
+        for(int i = 0; i < palabras.length; i++){
+            for(int j = 0; j < palabras.length - 1; j++){
+                if (palabras[j].compareTo(palabras[j+1]) > 0) {
+                    String tmp = palabras[j];
+                    palabras[j] = palabras[j + 1];
+                    palabras[j+ 1] = tmp;
+                }
+            }
 
+            char vocal = palabras[i].charAt(0);
+            char newC = Character.toLowerCase(vocal);
+            
+            if (newC == 'a' || newC == 'e' || newC == 'i' || newC == 'o' || newC == 'u') {
+                vocales++;
+            }
 
+        }
 
+        System.out.println(Arrays.toString(palabras));
+        System.out.println(vocales);
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 8");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
 
+        //Ordenar un arreglo y buscar el valor más cercano a un número dado.
+
+        int[] arrayNueve = {1, 4, 3, 5, 2, 6, 8, 9, 7, 10, 15, 22};
+        int numNueve = 15; 
+        int res = 1;
+        int resAux = 0;
+
+        for(int i = 0; i < arrayNueve.length; i++){
+            for(int j = 0; j < arrayNueve.length - 1; j++){
+                if (arrayNueve[j] > arrayNueve[j+1]) {
+                    int tmp = arrayNueve[j];
+                    arrayNueve[j] = arrayNueve[j + 1];
+                    arrayNueve[j + 1] = tmp;
+                }
+            }
+
+            if (arrayNueve[i] == numNueve) {
+                resAux =  numNueve - arrayNueve[i - 1] ;
+                res = arrayNueve[i + 1] - numNueve;
+
+                if (resAux > res) {
+                    System.out.println("El valor mas cercano a " + numNueve + " es: " + arrayNueve[i + 1]);
+                }else{
+                    System.out.println("El valor mas cercano a " + numNueve + " es: " + arrayNueve[i - 1]);
+                }
+            }
+            
+        }
+
+        System.out.println(Arrays.toString(arrayNueve));
 
 
 
