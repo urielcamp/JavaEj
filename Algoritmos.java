@@ -1,3 +1,4 @@
+import java.net.Socket;
 import java.util.Arrays;
 
 public class Algoritmos {
@@ -1242,7 +1243,7 @@ public class Algoritmos {
         //Buscar si dos arreglos tienen al menos un número en común.
 
         int[] arrayUno = {12, 32, 45, 32, 1, 2, 452, 9};
-        int[] arrayDos = {21, 4, 5667, 4346, 75854, 234, 9983, 22};
+        int[] arrayDos = {21, 4, 5667, 4346, 75854, 234, 9983, 2};
         boolean elementoComun = false;
 
         for(int i  = 0; i < arrayUno.length; i++){
@@ -1261,7 +1262,63 @@ public class Algoritmos {
             }
         
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 4");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
 
+        //Ordenar dos arreglos y unirlos en uno solo ordenado.
+
+        int[] arrayA = {21, 212, 3, 23, 4, 2, 6, 9, 1, 90};
+        int[] arrayB = {23, 123, 4, 2, 90, 257, 22314};
+
+        int[] auxCuatro = new int[arrayA.length + arrayB.length];
+
+        for(int i = 0; i < arrayA.length - 1; i++){
+            for(int j = 0; j < arrayA.length - i - 1; j++){
+                if (arrayA[j] > arrayA[j + 1]) {
+                    int tmp = arrayA[j];
+                    arrayA[j] = arrayA[j+1];
+                    arrayA[j + 1] = tmp;
+                }
+            }
+        }
+
+        for(int i = 0; i < arrayB.length - 1; i++){
+            for(int j = 0; j < arrayB.length - i - 1; j++){
+                if (arrayB[j] > arrayB[j + 1]) {
+                    int tmp = arrayB[j];
+                    arrayB[j] = arrayB[j+1];
+                    arrayB[j + 1] = tmp;
+                }
+            }
+        }
+
+        for(int i = 0; i < arrayA.length; i++){
+            auxCuatro[i] = arrayA[i];
+        }
+
+        for(int i = 0; i < arrayB.length; i++){
+            auxCuatro[arrayA.length + i] = arrayB[i];
+        }
+
+        for(int i = 0; i < auxCuatro.length - 1; i++){
+            for(int j = 0; j < auxCuatro.length - i - 1; j++){
+                if (auxCuatro[j] > auxCuatro[j + 1]) {
+                    int tmp = auxCuatro[j];
+                    auxCuatro[j] = auxCuatro[j + 1];
+                    auxCuatro[j + 1] = tmp;
+                }
+            }
+        }
+
+        System.out.println(Arrays.toString(auxCuatro));
+        System.out.println(Arrays.toString(arrayA));
+        System.out.println(Arrays.toString(arrayB));
+        
 
 
 
