@@ -1,7 +1,7 @@
 import java.net.Socket;
 import java.util.Arrays;
 
-public class Algoritmos {
+public class SemanaDos {
     public static void main(String[] args) {
         
 

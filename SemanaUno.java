@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Random;
 import java.util.Arrays;
-public class Matrices {
+public class SemanaUno {
     public static void main(String[] args) {
         System.out.println();
         System.out.println();
