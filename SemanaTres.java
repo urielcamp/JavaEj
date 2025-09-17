@@ -312,6 +312,51 @@ public class SemanaTres {
             System.out.println(paDos + " no es palindromo");
         }
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 3");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Dada una cadena, reemplazar todas las vocales por *.
+
+        String paTres = "Hola como estas";
+
+        for(int i = 0; i < paTres.length(); i++){
+            char c = paTres.charAt(i);
+
+            if (
+                c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'
+            ) {
+                paTres = paTres.replace(c, '*');
+            }
+        }
+
+        System.out.println(paTres);
+
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 4");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Reemplazar todas las apariciones de un carácter específico por otro.
+
+        String paCuatro = "hola como estas";
+
+        char cCuatro = 'o';
+
+        char mCuatro = '#';
+
+        paCuatro = paCuatro.replace(cCuatro, mCuatro);
+
+        System.out.println(paCuatro);
+
 
     }
 }
