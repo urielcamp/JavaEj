@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class SemanaTres {
     public static void main(String[] args) {
 
@@ -406,8 +408,121 @@ public class SemanaTres {
         System.out.println(paSeis);
 
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 7");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Contar cuántas palabras tiene una frase.
+
+        String paSiete = "Hola como esta todo";
+        int cp = 0;
+
+        for(int i = 0; i < paSiete.length(); i++){
+            char c = paSiete.charAt(i);
+            String ce = Character.toString(c);
+
+            System.out.println(c);
+            
+        
+            if (c == ' ') {
+                cp++;
+            }
+        }
+
+        cp++;
+
+        System.out.println("el string tiene " + cp + " palabras");
 
 
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 8");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Verificar si dos palabras son anagramas.
+
+        String paOchoA = "sergiosd";
+        String paOchoB = "regios";
+        char[] auxOchoA = new char[paOchoA.length()];
+        char[] auxOchoB = new char[paOchoB.length()];
+        boolean eOcho = true;
+
+
+        for(int i = 0; i < paOchoA.length(); i++){
+            char c = paOchoA.charAt(i);
+            auxOchoA[i] = c;
+        }
+
+        for(int i = 0; i < paOchoB.length(); i++){
+            char k = paOchoB.charAt(i);
+            auxOchoB[i] = k;
+            
+        }
+
+        System.out.println(Arrays.toString(auxOchoA));
+        System.out.println(Arrays.toString(auxOchoB));
+
+        for(int i = 0; i < auxOchoA.length - 1; i++){
+            for(int j = 0; j < auxOchoA.length - i - 1; j++){
+                if (auxOchoA[j] > auxOchoA[j + 1]) {
+                    char temp = auxOchoA[j];
+                    auxOchoA[j] = auxOchoA[j + 1];
+                    auxOchoA[j + 1] = temp;
+                }
+            }
+            
+        }
+        System.out.println();
+
+        for(int i = 0; i < auxOchoB.length - 1; i++){
+            for(int j = 0; j < auxOchoB.length - i - 1; j++){
+                if (auxOchoB[j] > auxOchoB[j + 1]) {
+                    char tmp = auxOchoB[j];
+                    auxOchoB[j] = auxOchoB[j + 1];
+                    auxOchoB[j + 1] = tmp;
+                }
+            }
+            
+        }
+
+        System.out.println(Arrays.toString(auxOchoA));
+        System.out.println(Arrays.toString(auxOchoB));
+        
+        try{
+            for(int i = 0; i < auxOchoB.length; i++){
+                char c = auxOchoB[i];
+                
+
+                if (c == auxOchoA[i]) {
+                    eOcho = true;
+                }else{
+                    eOcho = false;
+                    break;
+                }
+            }
+        }catch (Exception e){
+            System.out.println("Las palabras no son anagramas");
+            eOcho = false;
+        }
+
+
+
+
+        System.out.println();
+
+    if (eOcho) {
+        System.out.println("Las palabras son anagramas");
+    }else{
+        System.out.println("Las palabras no son anagramas");
+    }        
 
 
 
