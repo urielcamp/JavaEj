@@ -224,12 +224,92 @@ public class SemanaTres {
 
         String pDiez = "elegidos";
 
-        char c = pDiez.charAt(0);
+        char cee = pDiez.charAt(0);
 
         if (
-            c == 'A' || c == 'a' || c == 'E' || c == 'e' || c == 'I' || c == 'i' || c == 'O' || c == 'o' || c == 'U' || c == 'u' 
+            cee == 'A' || cee == 'a' || cee == 'E' || cee == 'e' || cee == 'I' || cee == 'i' || cee == 'O' || cee == 'o' || cee == 'U' || cee == 'u' 
         ) {
-            System.out.println(pDiez + " empieza con la vocal " + c);
+            System.out.println(pDiez + " empieza con la vocal " + cee);
+        }
+
+
+
+                System.out.println();
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("CADENAS Y STRINGS DIA 2 -- PALINDROMOS Y TRANSFORMACIONES");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        System.out.println("EJER 1");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Verificar si una palabra es un palíndromo.
+
+        String paUno = "holoh";
+
+        boolean eUno = false;
+
+        for(int i = 0; i < paUno.length(); i++){
+            
+            char c = paUno.charAt(i);
+            
+
+            if (c == paUno.charAt(paUno.length() - i - 1)) {
+                eUno = true;
+            }else{
+                eUno = false;
+                break;
+            }
+                
+                
+            
+        }
+
+        if (eUno) {
+            System.out.println(paUno + " es palindromo");
+        }else{
+            System.out.println(paUno + " no es palindromo");
+        }
+
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 2");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Verificar si una frase es un palíndromo (ignorando espacios y mayúsculas).
+
+        String paDos = "Hola comoc aloh";
+
+        paDos = paDos.replace(" ", "");
+        paDos = paDos.toLowerCase();
+        boolean eDos = false;
+
+        System.out.println(paDos);
+        System.out.println();
+
+        for(int i = 0; i < paDos.length(); i++){
+            char c = paDos.charAt(i);
+
+            if (c == paDos.charAt(paDos.length() - i - 1)) {
+                eDos = true;
+            }else{
+                eDos = false;
+            }
+        }
+
+        if (eDos) {
+            System.out.println(paDos + " es palindromo");
+        }else{
+            System.out.println(paDos + " no es palindromo");
         }
 
 
