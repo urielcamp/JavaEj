@@ -358,5 +358,62 @@ public class SemanaTres {
         System.out.println(paCuatro);
 
 
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 5");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Eliminar todas las vocales de un String.
+
+        String paCinco = "Hablaba";
+
+        for(int i = 0; i < paCinco.length(); i++){
+            char c = paCinco.charAt(i);
+            
+            
+
+            if (
+                c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' 
+            ) {
+
+                String ca = Character.toString(c);
+                paCinco = paCinco.replace(ca, "");
+            }
+        }
+
+        System.out.println(paCinco);
+
+
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 6");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Eliminar todas las consonantes de un String.
+
+        String paSeis = "hablaba";
+
+        paSeis = paSeis.replaceAll("[b-df-hj-np-tv-z]", "");
+
+        System.out.println(paSeis);
+
+
+
+
+
+
+
+
+
+
+
     }
 }
