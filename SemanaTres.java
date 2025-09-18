@@ -525,9 +525,67 @@ public class SemanaTres {
     }        
 
 
+        System.out.println();
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("CADENAS Y STRINGS DIA 3 -- CONTADORES Y BUSQUEDAS DE TEXTO");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
 
+        System.out.println("EJER 1");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
 
+        //Contar cuántas vocales hay en una frase.
 
+        String strUno = "Hola como estas";
+        int cntUno = 0;
+
+        for(int i = 0; i < strUno.length(); i++ ){
+            char c = strUno.charAt(i);
+        
+
+            if (
+                c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'
+            ) {
+                cntUno++;
+            }
+        }
+
+        System.out.println("La frase tiene " + cntUno + " vocales");
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 2");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Contar cuántas consonantes hay en una frase.
+
+        String strDos = "hola como estas";
+
+        int cntDos = 0;
+
+        for(int i = 0; i < strDos.length(); i++){
+            char c = strDos.charAt(i);
+
+            if (
+                c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == ' ' 
+            ) {
+                continue;
+            }else{
+                cntDos++;
+            }
+
+        }
+        System.out.println();
+
+        System.out.println("La frase tiene " + cntDos + " consonantes");
 
 
     }
