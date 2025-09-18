@@ -588,5 +588,64 @@ public class SemanaTres {
         System.out.println("La frase tiene " + cntDos + " consonantes");
 
 
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 3");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Contar cuántos espacios hay en una cadena.
+
+        String strTres = "Hola como estas";
+        int cntTres = 0;
+
+        for(int i = 0; i < strTres.length(); i++){
+            char c = strTres.charAt(i);
+
+            if (c == ' ') {
+                cntTres++;
+            }
+        }
+
+        System.out.println(cntTres);
+
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 4");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Contar cuántos números hay en una cadena.
+
+        String strCuatro = "Hola com0 est4s";
+
+        int cntCuatro = 0;
+
+        for(int i = 0; i < strCuatro.length(); i++){
+            char c = strCuatro.charAt(i);
+
+        if (
+                c == '1' || c == '2' || c == '3' || c == '4' || c == '5' || c == '6' || c == '7' || c == '8' || c == '9' || c == '0'
+            ) 
+            {
+                cntCuatro++;
+            }
+        }
+
+        System.out.println(cntCuatro);
+
+
+
+
+
+
+
+
     }
 }
