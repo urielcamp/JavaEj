@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.ArrayList;
 
 public class SemanaTres {
     public static void main(String[] args) {
@@ -639,6 +640,157 @@ public class SemanaTres {
         }
 
         System.out.println(cntCuatro);
+
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 5");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Identificar la letra que más se repite en un String.
+
+        String strCinco = "Holaa coma casa";
+        int cntCinco = 0;
+        char iCinco = ' ';
+        int auxCinco = 0;
+        for(int i = 0; i < strCinco.length(); i++){
+            char c = strCinco.charAt(i);
+
+            for(int j = 0; j < strCinco.length(); j++){
+                char k = strCinco.charAt(j);
+                if (c == k) {
+                    auxCinco++;
+                    if (auxCinco > cntCinco) {
+                        iCinco = c;
+                        cntCinco++;
+                    }
+                }
+            }
+        }
+
+        System.out.println(iCinco + " es la letra que mas se repite");
+
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 6");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Encontrar la palabra más larga en una frase.
+
+        
+        String strSeis = "holaaa como estas";
+        String auxSeis = " ";
+        StringBuilder st = new StringBuilder();
+
+
+        for(int i = 0; i < strSeis.length(); i++){
+            char c = strSeis.charAt(i);
+
+            if (c != ' ') {
+                st.append(c);
+            }else{
+
+                if (st.length() > auxSeis.length()) {
+                    auxSeis = st.toString();
+                }
+                st.setLength(0);
+            }
+
+            if (st.length() > auxSeis.length()) {
+                    auxSeis = st.toString();
+                }
+
+            }
+
+            System.out.println(auxSeis);
+            
+        
+
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 7");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Encontrar la palabra más corta en una frase.
+
+        String strSiete = "Holaa como estas lo";
+        String auxSiete = " ";
+        StringBuilder str = new StringBuilder();
+
+        for(int i = 0; i < strSiete.length(); i++){
+            char c = strSiete.charAt(i);
+
+            if (c != ' ') {
+                str.append(c);
+                auxSiete = str.toString();
+            }else{
+                
+                
+
+                if (auxSiete.length() > str.length()) {
+                    auxSiete = str.toString();
+                }
+
+                str.setLength(0);
+            }
+
+            
+
+        }
+
+        System.out.println(auxSiete);
+
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 8");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Verificar si una palabra está contenida dentro de una frase.
+
+        String strOcho = "Hola como estas";
+        String auxOcho = "comos";
+        boolean esta = false;
+        StringBuilder s = new StringBuilder();
+
+        for(int i = 0; i < strOcho.length(); i++){
+            char c = strOcho.charAt(i);
+            
+            if (c != ' ') {
+                s.append(c);
+                //System.out.println(s);
+            }else{
+                if (s.toString().equals(auxOcho)) {
+                    esta = true;
+                    System.out.println("son iguales");
+                    break;
+                }else{
+                    //System.out.println(s);
+                    s.setLength(0);
+                }
+            }
+        }
+
+        if (esta) {
+            System.out.println("la palabra esta en el string");
+        }else{
+            System.out.println("no esta en el string ");
+        }
+
 
 
 
