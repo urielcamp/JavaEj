@@ -880,10 +880,69 @@ public class SemanaTres {
         System.out.println(stringDos);
 
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 3");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Implementar una función que compare dos Strings y devuelva qué tan parecidos son 
+        //(porcentaje de coincidencia de caracteres en las mismas posiciones).
+
+        String a = "Hola como estas";
+        String b = "Hola estas como";
+
+        comString(a, b);
 
 
 
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 4");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
 
-    
+
+        //
+
+
 }
+
+    //EJ 3
+
+        //Implementar una función que compare dos Strings y devuelva qué tan parecidos son 
+        //(porcentaje de coincidencia de caracteres en las mismas posiciones).
+
+    public static void comString(String a, String b){
+            double porcentaje;
+            double countA = a.length();
+            double countB = 1;
+
+            if (a.equals(b)) {
+                porcentaje = 100;
+            }
+
+            for(int i = 0; i < a.length(); i++){
+                char c = a.charAt(i);
+
+                for(int j = 0; j < b.length(); j++){
+                    char k = b.charAt(j);
+
+                    if (c == k && i == j) {
+                        countB++;
+                    }
+                }
+            }
+
+            System.out.println(countB);
+            System.out.println(countA);
+
+            porcentaje = (countB / countA) * 100;
+
+            System.out.println(porcentaje);
+        }
 }
