@@ -763,7 +763,7 @@ public class SemanaTres {
         //Verificar si una palabra está contenida dentro de una frase.
 
         String strOcho = "Hola como estas";
-        String auxOcho = "comos";
+        String auxOcho = "como";
         boolean esta = false;
         StringBuilder s = new StringBuilder();
 
@@ -776,7 +776,7 @@ public class SemanaTres {
             }else{
                 if (s.toString().equals(auxOcho)) {
                     esta = true;
-                    System.out.println("son iguales");
+                    //System.out.println("son iguales");
                     break;
                 }else{
                     //System.out.println(s);
@@ -792,12 +792,98 @@ public class SemanaTres {
         }
 
 
+        System.out.println();
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("CADENAS Y STRINGS DIA 5 -- RETOS AVANZADOS CON STRINGS");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        System.out.println("EJER 1");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
 
 
+        //Verificar si una frase es un pangrama (contiene todas las letras del alfabeto).
 
+        String stringUno = "abcdefghijklmnopqrstvwxyz";
 
+        String auxUno = "abcdefghijklmnopqrstvwxyz";
 
+        boolean bUno = false;
 
+        for(int i = 0; i < auxUno.length(); i++){
+            char c = auxUno.charAt(i);
+
+            for(int j = 0; j < stringUno.length(); j++){
+                char k = stringUno.charAt(j);  
+                
+
+                if (c == k) {
+                    bUno = true;
+                    System.out.println(bUno);
+                    break;
+                }else{
+                    bUno = false;
+                }
+        }
+
+            if (bUno) {
+                bUno = true;
+            }else{
+                System.out.println("No tiene todas las letras del alfabeto");
+                break;
+            }
 
     }
+
+    System.out.println(bUno);
+
+    if (bUno) {
+        System.out.println("Tiene todas las letras del alfabeto");
+    }
+
+
+
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+        System.out.println("EJER 2");
+        System.out.println();
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        //Codificar una palabra en "leet speak" (ejemplo: "hola" → "h0l4").
+
+        String stringDos = "Hola como estas";
+        
+
+        for(int i = 0; i < stringDos.length(); i++){
+            char c = stringDos.charAt(i);
+            if (c == 'a') {
+                stringDos = stringDos.replace('a', '4');
+            }else if(c == 'e'){
+                stringDos = stringDos.replace('e', '3');
+            }else if(c == 'i'){
+                stringDos = stringDos.replace('i', '1');
+            }else if(c == 'o'){
+                stringDos = stringDos.replace('o', '0');
+            }else if(c == 'u'){
+                stringDos = stringDos.replace('u', '5');
+            }
+            
+        }
+
+        System.out.println(stringDos);
+
+
+
+
+
+
+    
+}
 }
